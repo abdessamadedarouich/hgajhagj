@@ -41,7 +41,7 @@ dns:
   # https://github.com/atech/postal/wiki/Domains-&-DNS-Configuration for further
   # information about these.
   mx_records:
-    - mx.postal.example.com
+    - mx.postal.paypalcompany.ml
   smtp_server_hostname: postal.paypalcompany.ml
   spf_include: spf.postal.paypalcompany.ml
   return_path: rp.postal.paypalcompany.ml

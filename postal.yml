@@ -1,0 +1,65 @@
+web:
+  # The host that the management interface will be available on
+  host: postal.example.com
+  # The protocol that requests to the management interface should happen on
+  protocol: https
+
+fast_server:
+  # This can be enabled to enable click & open tracking on emails. It is disabled by
+  # default as it requires a separate static IP address on your server.
+  enabled: false
+  bind_address:
+
+general:
+  # This can be changed to allow messages to be sent from multiple IP addresses
+  use_ip_pools: false
+
+main_db:
+  # Specify the connection details for your MySQL database
+  host: 127.0.0.1
+  username: postal
+  password: p0stalpassw0rd
+  database: postal
+
+message_db:
+  # Specify the connection details for your MySQL server that will be house the
+  # message databases for mail servers.
+  host: 127.0.0.1
+  username: postal
+  password: p0stalpassw0rd
+  prefix: postal
+
+rabbitmq:
+  # Specify the connection details for your RabbitMQ server.
+  host: 127.0.0.1
+  username: postal
+  password: p0stalpassw0rd
+  vhost: /postal
+
+dns:
+  # Specifies the DNS record that you have configured. Refer to the documentation at
+  # https://github.com/atech/postal/wiki/Domains-&-DNS-Configuration for further
+  # information about these.
+  mx_records:
+    - mx.postal.example.com
+  smtp_server_hostname: postal.paypalcompany.ml
+  spf_include: spf.postal.paypalcompany.ml
+  return_path: rp.postal.paypalcompany.ml
+  route_domain: routes.postal.paypalcompany.ml
+  track_domain: track.postal.paypalcompany.ml
+
+smtp:
+  # Specify an SMTP server that can be used to send messages from the Postal management
+  # system to users. You can configure this to use a Postal mail server once the
+  # your installation has been set up.
+  host: 127.0.0.1
+  port: 2525
+  username: # Complete when Postal is running and you can
+  password: # generate the credentials within the interface.
+  from_name: Postal
+  from_address: postal@yourdomain.com
+
+rails:
+  # This is generated automatically by the config initialization. It should be a random
+  # string unique to your installation.
+  secret_key: 2246e116d37463a6849a8de7b67164ff5d723ce4b26824521230d2409f48893ea8b05e850aef961a4937e5a7edcca9204353839e405565316c71b52708631588ae3fead36297c6cb94122461ee4beafba9f4a5b022fd240e7d2ab16fc91d15a801dd1f1b38e6c0fcd08b88a38db7d361e0939882390e3b31da30a14cb0c61094
